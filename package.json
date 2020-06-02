@@ -19,6 +19,7 @@
   "homepage": "https://github.com/matheuslopess1/crud-api-produtos#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.16",
     "mongoose-paginate": "^5.0.3",

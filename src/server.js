@@ -4,10 +4,7 @@ const cors = require("cors");
 module.exports = function App() {
   const app = express();
 
-  app.use(express.json());
-  app.use(cors());
-
-  function middlewares() {
+  function preMiddlewares() {
     app.use(express.json());
     app.use(cors());
   }
@@ -16,8 +13,13 @@ module.exports = function App() {
     app.use("/api", require("./routes"));
   }
 
-  middlewares();
+  function postMiddlewares() {
+    app.use(require("./app/middlewares/catchError"));
+  }
+
+  preMiddlewares();
   routes();
+  postMiddlewares();
 
   return app;
 };
