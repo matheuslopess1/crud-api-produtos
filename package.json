@@ -4,7 +4,7 @@
   "description": "Códigos produzidos no curso de Nodejs da skylab, plataforma da RocketSeat",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",

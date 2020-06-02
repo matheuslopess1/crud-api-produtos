@@ -1,21 +1,23 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const requireDir = require("require-dir");
 const cors = require("cors");
 
-const app = express();
+module.exports = function App() {
+  const app = express();
 
-app.use(express.json());
-app.use(cors());
+  app.use(express.json());
+  app.use(cors());
 
-mongoose.connect("mongodb://192.168.99.100:27017/nodeapi", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: true,
-});
+  function middlewares() {
+    app.use(express.json());
+    app.use(cors());
+  }
 
-requireDir("./app/models");
+  function routes() {
+    app.use("/api", require("./routes"));
+  }
 
-app.use("/api", require("./routes"));
+  middlewares();
+  routes();
 
-app.listen(3000);
+  return app;
+};
