@@ -1,0 +1,23 @@
+{
+  "name": "crud-api-produtos",
+  "version": "1.0.0",
+  "description": "Códigos produzidos no curso de Nodejs da skylab, plataforma da RocketSeat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheuslopess1/crud-api-produtos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheuslopess1/crud-api-produtos/issues"
+  },
+  "homepage": "https://github.com/matheuslopess1/crud-api-produtos#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
