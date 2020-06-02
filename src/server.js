@@ -9,6 +9,7 @@ app.use(express.json());
 mongoose.connect("mongodb://192.168.99.100:27017/nodeapi", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useFindAndModify: true,
 });
 
 requireDir("./app/models");
